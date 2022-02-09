@@ -15,11 +15,20 @@ import TaskPage from '../TaskPage/TaskPage';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import { createBrowserHistory } from "history";
+import { withStyles } from "@material-ui/core/styles";
 
-function App() {
+const styles = {
+    boxTransparent: {
+      height: "100%",
+      background: "none",
+      display:"flex",
+    }
+  };
+
+function App({ classes }) {
     return (
         <ThemeProvider theme={theme}>
-        <Box height={"100%"} display={"flex"} flexDirection={"column"} bgcolor="transparent !important" >
+        <Box className={classes.boxTransparent} >
              <Box sx={{ flexGrow: 1 }}> 
                 <AppHeader/>
                 <Box padding={"0 2"} flex={1} overflow={"auto"}>
@@ -44,4 +53,4 @@ function App() {
     )
 };
 
-export default App;
+export default withStyles(styles)(App);
