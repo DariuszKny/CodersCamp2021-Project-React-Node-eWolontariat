@@ -21,7 +21,7 @@ export function App() {
    
     return (
         <ThemeProvider theme={theme}>
-        <Box height={"100%"} display={"flex"} flexDirection={"column"}>
+        <Box height={"100%"} display={"flex"} flexDirection={"column"} bgcolor={"white"}>
              <Box sx={{ flexGrow: 1 }}> 
                 <AppHeader/>
                 <Box padding={"0 2"} flex={1} overflow={"auto"}>
