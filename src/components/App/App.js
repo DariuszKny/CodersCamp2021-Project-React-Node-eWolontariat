@@ -16,12 +16,10 @@ import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import { createBrowserHistory } from "history";
 
-export function App() {
-  
-   
+function App() {
     return (
         <ThemeProvider theme={theme}>
-        <Box height={"100%"} display={"flex"} flexDirection={"column"} bgcolor={"white"}>
+        <Box height={"100%"} display={"flex"} flexDirection={"column"} bgcolor="transparent !important" >
              <Box sx={{ flexGrow: 1 }}> 
                 <AppHeader/>
                 <Box padding={"0 2"} flex={1} overflow={"auto"}>
